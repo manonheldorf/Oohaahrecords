@@ -1,0 +1,145 @@
+---
+---
+<style>
+  /* Mobile-only footer tweaks (does not affect desktop) */
+  @media (max-width: 48rem) {
+    .footer-inner {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      gap: 1rem !important;
+    }
+
+    .footer-inner .shrink-0 {
+      margin-bottom: 0.75rem !important;
+    }
+
+    .footer-inner .ml-auto {
+      margin-left: 0 !important;
+    }
+
+    .footer-inner .flex.flex-wrap {
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 0.75rem !important;
+    }
+
+    .footer-inner .text-right {
+      text-align: center !important;
+    }
+
+    .footer-logo {
+      width: 9rem !important; /* smaller logo on mobile */
+    }
+
+    .footer-inner .justify-end {
+      justify-content: center !important;
+    }
+
+    /* Mobile-specific social icon improvements (only affect small screens) */
+    .footer-inner .social-icons {
+      gap: 1rem !important;
+      margin-top: 0.25rem !important;
+    }
+
+    .footer-inner .social-icons a {
+      width: 3.5rem !important;
+      height: 3.5rem !important;
+      min-width: 3.5rem !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: var(--color-beige) !important;
+      border-radius: 0.75rem !important;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12) !important;
+      transition: transform 180ms ease, box-shadow 180ms ease !important;
+    }
+
+    .footer-inner .social-icons a img {
+      width: 1.6rem !important;
+      height: 1.6rem !important;
+      display: block !important;
+    }
+
+    .footer-inner .social-icons a:hover {
+      transform: translateY(-4px) scale(1.02) !important;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.18) !important;
+    }
+  }
+</style>
+
+<section class="bg-beige pt-10 pb-10 text-orange relative">
+  <div class="container mx-auto">
+
+    <div class="footer-inner flex flex-wrap md:flex-nowrap items-start gap-8">
+
+      <!-- Logo -->
+      <div class="shrink-0">
+        <a href="/">
+          <img src="/orangelogo.svg" alt="LOGO" class="w-120 md:w-120 footer-logo" />
+        </a>
+      </div>
+
+      <!-- Tekstindhold samlet -->
+      <div class="flex flex-col gap-8 ml-auto">
+
+        <!-- Kontaktinfo + åbningstider i én kolonne -->
+        <div class="flex flex-wrap gap-16">
+
+          <!-- Kontaktinfo -->
+          <div>
+        <h2 class="font-header text-lg font-bold">Adresse:</h2>
+            <p class="font-paragraf text-lg">Ryesgade 77 kl</p>
+            <p class="font-paragraf text-lg">2100 København Ø</p>
+            <p class="font-paragraf text-lg">Denmark</p>
+
+            <h2 class="font-header text-lg font-bold mt-4">Telefonnummer:</h2>
+            <p class="font-paragraf text-lg"> +45 50 90 75 14</p>
+
+            <h2 class="font-header text-lg font-bold mt-4">Mail:</h2>
+            <p class="font-paragraf text-lg">mail@oohaahrecords.com</p>
+          </div>
+
+          <!-- Åbningstider -->
+          <div class="text-right">
+            <h2 class="font-header text-lg font-bold">Åbningstider:</h2>
+            <p class="font-paragraf text-lg">man-fre: 15-18</p>
+            <p class="font-paragraf text-lg">tors: 13-18</p>
+            <p class="font-paragraf text-lg">lør: 11-15</p>
+          </div>
+
+        </div>
+
+        <!-- SOME ikoner UNDER alt tekst -->
+        <div class="social-icons flex flex-row items-center space-x-4 pt-0 -mt-25 justify-end hidden sm:flex
+">
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/OohRecordsAah" target="_blank"
+            class="inline-flex items-center justify-center w-15 h-15 bg-beige rounded-md shadow-md hover:bg-orange transition">
+            <img src="/facebook.svg" alt="Facebook" />
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/ooh_aah_records/" target="_blank"
+            class="inline-flex items-center justify-center w-15 h-15 bg-beige rounded-md shadow-md hover:bg-orange transition">
+            <img src="/inst.svg" alt="Instagram" />
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <!-- Mobile-only side social icons (anchored to footer, visible when footer is in view) -->
+  <div class="md:hidden absolute right-4 top-1/2 transform -translate-y-1/2 z-20 flex flex-col items-center gap-3">
+    <a href="https://www.facebook.com/OohRecordsAah" target="_blank" aria-label="Facebook" class="inline-flex items-center justify-center w-14 h-14 bg-beige rounded-xl shadow-lg transition-transform">
+      <img src="/facebook.svg" alt="Facebook" class="w-6 h-6" />
+    </a>
+    <a href="https://www.instagram.com/ooh_aah_records/" target="_blank" aria-label="Instagram" class="inline-flex items-center justify-center w-14 h-14 bg-beige rounded-xl shadow-lg transition-transform">
+      <img src="/inst.svg" alt="Instagram" class="w-6 h-6" />
+    </a>
+  </div>
+</section>

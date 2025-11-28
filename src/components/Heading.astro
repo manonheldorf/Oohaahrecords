@@ -1,0 +1,35 @@
+---
+const { htmlheading="h2", size="medium", space="", variant="", className="" } = Astro.props; 
+const Htmlheading = htmlheading;
+ 
+// Størrelser – fjern farver herfra!
+const sizeClasses = {
+  xlarge: "text-7xl pb-8 font-display",
+  large: "text-5xl font-bold pb-8 font-header",
+  medium: "text-md pb-4 font-paragraf",
+  small: "text-base pb-2 font-paragraf",
+};
+
+// Indryk
+const spaceClasses = {
+  none: "",
+  normal: "pl-12",
+};
+
+// Farver
+const stylingClasses = {
+  primary: "text-orange",
+  secondary: "text-beige",
+  tertiary: "text-black",
+};
+---
+<Htmlheading 
+  class:list={[
+    sizeClasses[size], 
+    spaceClasses[space], 
+    stylingClasses[variant], 
+    className  
+  ]}
+>
+  <slot />
+</Htmlheading>

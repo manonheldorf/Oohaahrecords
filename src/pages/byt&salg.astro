@@ -1,0 +1,221 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+import { Image } from 'astro:assets';
+import thumbsup from "../assets/images/thumbsup.png";
+import Nyhedsbrev from "../components/Nyhedsbrev.astro";
+import Nyhedsbrevred from '../components/Nyhedsbrevred.astro';
+import Nyhedsbrevgreen from "../components/Nyhedsbrevgreen.astro";
+import Heading from '../components/Heading.astro';
+---
+
+<MainLayout title="Byt & Salg - Ooh Aah Records">
+<section class="bg-orange pt-[20px] pb-[80px]">
+<div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+      <div>
+        <h1 class="text-beige font-display fade-up text-4xl pb-8">
+          Byt & Salg
+        </h1>
+<h2 class="text-beige font-header text-2xl md:text-2xl lg:text-1xl pb-10 fade-up max-w-2xl">
+       Sælg dine brugte plader til os
+      </h2>
+
+
+<Heading size="small" variant="secondary" className="mb-8 text-beige">
+  Vi opkøber vinyl i alle genrer og tager os altid tid til at vurdere din samling grundigt.
+</Heading>
+
+<Heading size="small" variant="secondary" className="mb-8 text-beige">
+  Det er vigtigt for os, at du føler dig tryg gennem hele processen, og at vores tilbud er så fair som muligt.  
+  Ved kontantsalg udbetaler vi ca. 25% af den forventede salgspris.
+</Heading>
+
+<Heading size="small" variant="secondary" className="mb-8 text-beige">
+  Foretrækker du at bytte i stedet, tilbyder vi omkring halvdelen af vores forventede salgspris i bytteværdi.
+</Heading>
+</div>
+
+<div class="flex justify-center md:justify-end">
+        <img src="/armmedplader.svg" alt="Vinplade" class="w-72 sm:w-80 md:w-[380px] lg:w-[480px]"/>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Cykelbud -->
+ <section class="bg-beige py-20 text-orange">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <h1 class="text-orange font-display fade-up text-4xl pb-12">
+Cykelbud    </h1>
+<Heading size="small" variant="secondary" className="mb-2 text-orange">
+Hvis du har en pladesamling/musiksamling derhjemme, som du overvejer at sælge eller bytte, behøver du ikke engang forlade sofaen. Du kan nemlig bestille vores cykelbud hjem til dig!
+
+<Heading size="small" variant="secondary" className="mb-8">
+Vores bud kommer forbi, gennemgår dine plader sammen med dig og foretager en grundig vurdering på stedet. Derefter får du et ærligt og gennemsigtigt bud, så du nemt kan beslutte, om du vil sælge eller bytte din samling – helt uden besvær.
+Følg disse tre simple trin:
+
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-16 place-items-center mt-10">
+
+  <!-- ring -->
+  <div class="text-center flex flex-col items-center">
+    <img src="/ikon1.svg" class="w-70 mb-4" />
+  </div>
+
+  <!-- cykel -->
+  <div class="text-center flex flex-col items-center">
+    <img src="/ikon2.svg" class="w-70 mb-4" />
+  </div>
+
+  <!-- tilbud -->
+  <div class="text-center flex flex-col items-center">
+    <img src="/ikon3.svg" class="w-70 mb-4" />
+  </div>
+
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Bestil opkald -->
+<section class="bg-orange py-20 relative overflow-visible">
+
+  <!-- SVG i baggrund -->
+<img 
+  src="/kasettebond.svg"
+  alt="Kasette Illustration"
+  class="absolute right-[-40px] top-[-20px]
+         w-[650px] sm:w-[750px] md:w-[850px] lg:w-[900px]
+         pointer-events-none select-none z-0 opacity-0 sm:opacity-80"
+/>
+
+
+
+  <!-- CONTENT -->
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+
+    <!-- Titel + tekst -->
+    <h1 class="text-beige font-display fade-up text-4xl mb-6">
+      Bestil opkald
+    </h1>
+
+    <p class="text-beige font-paragraf text-lg max-w-3xl mb-12">
+      Udfyld formularen herunder, så kontakter vi dig hurtigt for at aftale et tidspunkt, der passer dig.
+      Vi sørger for, at vores cykelbud nemt kan komme forbi og vurdere din samling hjemme hos dig.
+    </p>
+
+    <!-- 2 KOLONNER -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+
+      <!-- FORM -->
+      <div>
+
+        <!-- Navn -->
+        <label class="block text-beige font-header mb-2">NAVN</label>
+        <input 
+          type="text" 
+          class="w-full bg-beige text-orange rounded-lg py-3 px-4 mb-6 focus:outline-none"
+        />
+
+        <!-- Telefonnummer -->
+        <label class="block text-beige font-header mb-2">TELEFONNUMMER</label>
+        <input 
+          type="text" 
+          class="w-full bg-beige text-orange rounded-lg py-3 px-4 mb-8 focus:outline-none"
+        />
+
+        <!-- Checkbox grid -->
+        <div class="grid grid-cols-2 gap-y-4 mb-10">
+          <label class="flex items-center space-x-2 text-beige font-header">
+            <input type="checkbox" class="w-5 h-5 accent-[#ED3B02] rounded-sm" />
+            <span>PLADER</span>
+          </label>
+
+          <label class="flex items-center space-x-2 text-beige font-header">
+            <input type="checkbox" class="w-5 h-5 accent-[#ED3B02] rounded-sm" />
+            <span>KASETTEBÅND</span>
+          </label>
+
+          <label class="flex items-center space-x-2 text-beige font-header">
+            <input type="checkbox" class="w-5 h-5 accent-[#ED3B02] rounded-sm" />
+            <span>CD</span>
+          </label>
+
+          <label class="flex items-center space-x-2 text-beige font-header">
+            <input type="checkbox" class="w-5 h-5 accent-[#ED3B02] rounded-sm" />
+            <span>DVD</span>
+          </label>
+        </div>
+
+        <!-- Button -->
+        <button 
+          id="bestilBtn"
+          class="bg-beige text-orange font-header py-3 px-6 rounded-lg
+                hover:bg-orange hover:text-beige
+                transition-all duration-200 fade-up"
+        >
+          BESTIL OPKALD
+        </button>
+
+        <p id="successMsg" class="text-beige font-header mt-4 hidden">
+          Tak! Vi ringer til dig snarest muligt 📞
+        </p>
+
+      </div>
+
+      <!-- TOM KOLONNE (illustrationen ligger bagved) -->
+      <div></div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- JS TIL KNAP -->
+<script>
+  const btn = document.getElementById("bestilBtn");
+  const msg = document.getElementById("successMsg");
+
+  // Når man klikker på knappen
+  btn.addEventListener("click", (event) => {
+    event.stopPropagation();
+
+    msg.classList.remove("hidden");
+
+    // Skift knapfarve
+    btn.classList.add("bg-orange-hover", "text-beige");
+    btn.classList.remove("bg-beige", "text-orange");
+
+    // Fjern hover
+    btn.classList.remove("hover:bg-orange", "hover:text-beige");
+  });
+
+  // Når man klikker udenfor knappen
+  document.addEventListener("click", () => {
+    msg.classList.add("hidden");
+
+    btn.classList.add("bg-beige", "text-orange");
+    btn.classList.remove("bg-orange", "text-beige");
+
+    btn.classList.add("hover:bg-orange", "hover:text-beige");
+  });
+</script>
+
+
+
+
+<style>
+	.fade-up {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.fade-up.animate {
+  opacity: 1;
+  animation: fadeInUp 1s;
+}
+</style>

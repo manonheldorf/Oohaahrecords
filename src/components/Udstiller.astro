@@ -1,0 +1,52 @@
+<style>
+  @keyframes infinite-scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-infinite-scroll {
+    animation: infinite-scroll 20s linear infinite;
+  }
+
+  /* Mobile: keep animation but adjust timing */
+  @media (max-width: 48rem) {
+    .animate-infinite-scroll {
+      animation: infinite-scroll 25s linear infinite;
+    }
+  }
+</style>
+
+<!-- Desktop: infinite scroll carousel -->
+<section class="hidden md:block relative w-full overflow-hidden">
+  <div class="inline-block animate-infinite-scroll whitespace-nowrap [&_img]:mx-3">
+
+    <img src="/placeholder.png" class="inline-block rounded-xl w-auto" />
+    <img src="/placeholder.png" class="inline-block rounded-xl w-auto" />
+    <img src="/placeholder.png" class="inline-block rounded-xl w-auto" />
+    <img src="/placeholder.png" class="inline-block rounded-xl w-auto" />
+    <img src="/placeholder.png" class="inline-block rounded-xl w-auto" />
+    <img src="/placeholder.png" class="inline-block rounded-xl w-auto" />
+    <img src="/placeholder.png" class="inline-block rounded-xl w-auto" />
+    <img src="/placeholder.png" class="inline-block rounded-xl w-auto" />
+    <img src="/placeholder.png" class="inline-block rounded-xl w-auto" />
+    <img src="/placeholder.png" class="inline-block rounded-xl w-auto" />
+
+  </div>
+</section>
+<!-- Mobile: infinite scroll carousel -->
+
+<section class="md:hidden relative w-full overflow-hidden py-4">
+  <div class="inline-block animate-infinite-scroll whitespace-nowrap [&_img]:mx-3">
+    <img src="/placeholder.png" class="inline-block rounded-xl h-[500px] w-auto" />
+    <img src="/placeholder.png" class="inline-block rounded-xl h-[500px] w-auto" />
+    <img src="/placeholder.png" class="inline-block rounded-xl h-[500px] w-auto" />
+    <img src="/placeholder.png" class="inline-block rounded-xl h-[500px] w-auto" />
+    <img src="/placeholder.png" class="inline-block rounded-xl h-[500px] w-auto" />
+    <img src="/placeholder.png" class="inline-block rounded-xl h-[500px] w-auto" />
+  </div>
+</section>
+

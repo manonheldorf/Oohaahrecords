@@ -1,0 +1,37 @@
+---
+import Heading from '../components/Heading.astro';
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+
+const { url="#", cardimage="", cardimagealt="", cardtitel="", cardundertitel="", cardtekst="", cardlist1="", cardlist2="", cardlist3="", cardpris="", cardbuttontekst="",
+  badgenyt="false", badgerabat="false", badgefaatilbage="" } = Astro.props;
+---
+
+<div class="card bg-beige w-full shadow-md rounded-xl">
+    <figure class="relative">
+      {(badgenyt === "true") && <div class="badge  bg-red p-4 text-beige rounded-md absolute top-4 left-0">Få tilbage</div>}
+      {(badgerabat !== "false") && <div class="badge badge-secondary absolute rounded-full top-4 right-0 hover:rotate-6 transition-all">20 %</div>}
+      {(badgefaatilbage === "true") && <div class="badge badge-warning @sm:badge-xl absolute bottom-4 left-0">Kun få flasker tilbage</div>}
+      <img class="p-4 rounded-2xl "
+       src={cardimage}
+       alt={cardimagealt} />
+    </figure>
+    <div class="card-body text-red ">
+      <h2 class="font-header text-3xl">{cardtitel}</h2>
+      <p class="font-pragraf text-lg font-bold">{cardundertitel}</p>
+      <ul class="font-pragraf text-md">{cardtekst}
+      <p>{cardlist1}</p>
+      <p>{cardlist2}</p>
+      <p>{cardlist3}</p></ul>
+      <div class="grid grid-cols-2 gap-4 pt-5">
+        <div>
+      <p class="font-header text-xl font-bold">{cardpris}</p>
+    </div>
+    <div>
+      <div class="card-actions justify-end">
+        <Button href={url} variant="primary" size="small">{cardbuttontekst}</Button>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>

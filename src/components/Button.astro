@@ -1,0 +1,35 @@
+---
+const {
+  variant = "primary",
+  size = "medium",
+  href = "",
+  class: extraClass = "", // ← Fanger 'class' korrekt
+} = Astro.props;
+
+const baseClasses =
+  "relative z-[5] inline-flex items-center justify-center rounded-full font-header uppercase tracking-wide cursor-pointer transition-all duration-200";
+
+const sizeClasses = {
+  small: "px-4 py-2 text-sm",
+  medium: "px-6 py-3 text-base",
+  large: "px-8 py-4 text-lg",
+};
+
+const variantClasses = {
+  primary: "bg-orange text-beige",
+  secondary: "bg-beige text-orange",
+  tertiary: "bg-black text-beige",
+};
+
+// 👇👇 HOVER SKAL VÆRE SIDST — derfor ligger extraClass helt til sidst
+const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${extraClass}`;
+---
+{href ? (
+  <a href={href} class={classes}>
+    <slot />
+  </a>
+) : (
+  <button type="button" class={classes}>
+    <slot />
+  </button>
+)}

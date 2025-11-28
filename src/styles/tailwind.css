@@ -1,0 +1,157 @@
+/* IMPORTER GOOGLE FONTS FØRST */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Climate+Crisis&family=Poppins:wght@100;900&display=swap');
+
+/* TAILWIND + PLUGINS */
+@import "tailwindcss";
+@import "animate.css";
+
+@plugin '@tailwindcss/typography';
+@plugin '@tailwindcss/forms';
+
+@plugin "daisyui" {
+  themes: ;
+}
+
+/* SCROLLBEHAVIOR */
+html {
+  scroll-behavior: smooth;
+}
+
+/* TEMA-VARIABLER */
+@theme {
+  /* FARVER */
+  --color-beige: #FDEBE6;
+  --color-beige-hover: #FEF3F0;
+  --color-beige-focused: #FFFBFA;
+  --color-beige-selected: #FAC4B3;
+
+  --color-orange: #ED3B02;
+ --color-orange-hover: #F2764E;
+  --color-orange-focused: #F69D81;
+  --color-orange-selected: #BE2F02;
+
+  --color-black: #000000;
+  --color-black-hover: #a6ab81;
+  --color-black-focused: #8e9464;
+  --color-black-selected: #565a3d;
+
+  /* FONTE */
+  --font-display: "Climate Crisis";
+  --font-header: "Bungee";
+  --font-paragraf: "Poppins";
+
+  /* BREAKPOINTS */
+  --breakpoint-xs: 25rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+}
+
+
+
+/* BASE LAYER */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+/* UTILITIES – dine custom font- og farve-klasser */
+@layer utilities {
+  /* FONT CLASSES */
+  .font-display {
+    font-family: var(--font-display), sans-serif;
+  }
+
+  .font-header {
+    font-family: var(--font-header), sans-serif;
+  }
+
+  .font-paragraf {
+    font-family: var(--font-paragraf), sans-serif;
+    font-weight: 200; /* light */
+  }
+.font-paragrafthick {
+    font-family: var(--font-paragraf), sans-serif;
+    font-weight: 900; /* bold */
+  }
+
+@layer utilities {
+  .spin-vinyl {
+    animation: spin 22s linear infinite; /* langsom rotation */
+    transform-origin: center center;      /* roter i midten */
+  }
+}
+
+}
+.bestil.clicked {
+  background-color: #E65325; /* din orange */
+  color: #F2E9DD; /* beige */
+}
+
+  /* BACKGROUND COLORS */
+  .bg-beige {
+    background-color: var(--color-beige);
+  }
+
+  .bg-orange {
+    background-color: var(--color-orange);
+  }
+
+  .bg-black {
+    background-color: var(--color-black);
+  }
+
+  /* TEXT COLORS */
+  .text-beige {
+    color: var(--color-beige);
+  }
+
+  .text-orange {
+    color: var(--color-orange);
+  }
+
+  .text-black {
+    color: var(--color-black);
+  }
+
+  /* HOVER */
+  .hover\:bg-orange:hover {
+    background-color: var(--color-orange-hover);
+  }
+
+
+
+/* COMPONENTS (tom – men behold den) */
+@layer components {}
+
+/* MOBILE OVERRIDES: these only apply under the md breakpoint so desktop is unchanged */
+@media (max-width: 48rem) {
+  /* Make the spinning vinyl less huge and less off-canvas on small screens */
+  .pladestor {
+    top: 26rem !important;
+    right: -10rem !important;
+    width: 60vw !important;
+    max-width: none !important;
+  }
+
+  /* Reduce hero vertical spacing on mobile */
+  .hero-content {
+    padding-top: 6rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Make genre tiles smaller on phones (w-65 / h-65 exist in markup) */
+  .w-65 { width: 30 !important; }
+  .h-65 { height: 30rem !important; }
+
+  /* Footer logo smaller on mobile */
+  .w-120 { width: 8rem !important; }
+
+  /* Ensure overflow in marquee-style sections behaves on small screens */
+  .animate-infinite-scroll img { height: auto; max-height: 15.5rem; }
+}
