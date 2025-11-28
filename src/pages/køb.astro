@@ -9,106 +9,150 @@ import Nyhedsbrev from "../components/Nyhedsbrev.astro";
 import Nyhedsbrevgreen from "../components/Nyhedsbrevgreen.astro";
 import Udstiller from "../components/Udstiller.astro";
 import Facebook from "../components/Facebook.astro";
-
 ---
 
 <MainLayout title="Køb - Ooh Aah Records">
+
+
+
   <section class="bg-orange pt-[20px] pb-[80px]">
-<div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
       <div>
         <h1 class="text-beige font-display fade-up text-4xl pb-8" id="Købibutikken-section">
-         Køb
+          Køb i butikken
         </h1>
-<h2 class="text-beige font-header text-2xl md:text-2xl lg:text-1xl pb-10 fade-up max-w-2xl">
-Kom ned i butikken       </h2>
-<Heading size="small" variant="secondary" className="mb-8 text-beige">
-Er du interesseret i vinylplader, cd’er, kassettebånd eller måske noget helt fjerde? </Heading>
 
-<Heading size="small" variant="secondary" className="mb-8 text-beige">
-Så kig ind i butikken og oplev følelsen af at forsvinde ind i musikkens verden. Hos os kan du gå på opdagelse i hylderne, bladre gennem covere og lade dig inspirere af både velkendte klassikere og nye kunstnere, du endnu ikke har mødt.</Heading>
+        <h2 class="text-beige font-header text-2xl md:text-2xl lg:text-1xl pb-10 fade-up max-w-2xl">
+          Kom ned i butikken
+        </h2>
 
-<Heading size="small" variant="secondary" className="mb-8 text-beige">
-Her kan du lede efter netop den plade, der mangler i din samling, eller falde over et album, der pludselig åbner døren til en helt ny genre. </Heading>
+        <Heading size="small" variant="secondary" className="mb-8 text-beige">
+          Er du interesseret i vinylplader, cd’er, kassettebånd eller måske noget helt fjerde?
+        </Heading>
 
-<Heading size="small" variant="secondary" className="mb-8 text-beige">
-Du er altid velkommen til at tage en kop kaffe, sætte dig ned og snakke musik med os eller andre besøgende. Vi er selv passionerede musiknørder, og vi elsker at dele ud af vores viden, høre dine anbefalinger og opdage nye navne sammen. 
-</Heading>
+        <Heading size="small" variant="secondary" className="mb-8 text-beige">
+          Så kig ind i butikken og oplev følelsen af at forsvinde ind i musikkens verden. Hos os kan du gå på opdagelse i hylderne, bladre gennem covere og lade dig inspirere af både velkendte klassikere og nye kunstnere, du endnu ikke har mødt.
+        </Heading>
 
-<Heading size="small" variant="secondary" className="mb-8 text-beige">
-Kom forbi, dyk ned i vores udvalg og vær en del af et fællesskab, hvor musikken binder os sammen.</Heading>
-</div>
+        <Heading size="small" variant="secondary" className="mb-8 text-beige">
+          Her kan du lede efter netop den plade, der mangler i din samling, eller falde over et album, der pludselig åbner døren til en helt ny genre.
+        </Heading>
 
+        <Heading size="small" variant="secondary" className="mb-8 text-beige">
+          Du er altid velkommen til at tage en kop kaffe, sætte dig ned og snakke musik med os eller andre besøgende. Vi er selv passionerede musiknørder, og vi elsker at dele ud af vores viden, høre dine anbefalinger og opdage nye navne sammen.
+        </Heading>
 
-		<Udstiller></Udstiller>
+        <Heading size="small" variant="secondary" className="mb-8 text-beige">
+          Kom forbi, dyk ned i vores udvalg og vær en del af et fællesskab, hvor musikken binder os sammen.
+        </Heading>
+      </div>
+  <img 
+      src="/illustration.svg"
+      class="hidden md:block pladestor absolute 
+             top-[12rem]            /* længere ned */
+             right-[3rem]        /* mere mod højre */
+             w-[52vw]              /* større */
+             max-w-[1200px]        /* maks størrelse */
+             z-10                  /* bag tekst */
+            "
+    />
+    </div>
+
+    <Udstiller></Udstiller>
   </section>
-<section class="bg-beige py-20" id="SoMe-section">
-  <div class="max-w-6xl mx-auto px-6">
 
-    <h1 class="text-orange font-display fade-up text-4xl pb-12">
-      Følg med på vores facebook
-    </h1>
-<h2 class="text-orange font-header text-2xl md:text-2xl lg:text-1xl pb-10 fade-up max-w-2xl">
-Køb igennem vores Facebook        </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+  <section class="bg-beige py-20" id="SoMe-section">
+    <div class="max-w-6xl mx-auto px-6">
 
-   <Facebook></Facebook>
+      <h1 class="text-orange font-display fade-up text-4xl pb-12">
+Køb via Sociale Medier      </h1>
 
-      <!-- Tekstboks -->
-      <div class=" text-orange rounded-xl p-0 md:p-8">
-        
-        
-       
-<h2 class="font-header text-2xl">
-1.        </h2>
-<p class="font-paragraf mb-4">
-Hold øje og find det, du er interesseret i        </p>
-        <h2 class="font-header text-2xl">
-2.        </h2>
-<p class="font-paragraf mb-4">
-Skriv til os, hvad du gerne vil købe        </p>
-        <h2 class="font-header text-2xl">
-3.        </h2>
-<p class="font-paragraf mb-4">
-Betal via MobilePay        </p>       
-  <h2 class="font-header text-2xl">
-4.        </h2>
-<p class="font-paragraf mb-4">
-Kom ned i butikken og hent din nye plade        </p>   
+      <h2 class="text-orange font-header text-2xl md:text-2xl lg:text-1xl pb-10 fade-up max-w-2xl">
+Find og køb vores plader igennem facebook & instagram       </h2>
 
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        <Facebook></Facebook>
+
+        <div class="text-orange rounded-xl p-0 md:p-8">
+          <h2 class="font-header text-2xl">1.</h2>
+          <p class="font-paragraf mb-4">Hold øje og find det, du er interesseret i</p>
+
+          <h2 class="font-header text-2xl">2.</h2>
+          <p class="font-paragraf mb-4">Skriv til os, hvad du gerne vil købe</p>
+
+          <h2 class="font-header text-2xl">3.</h2>
+          <p class="font-paragraf mb-4">Betal via MobilePay</p>
+
+          <h2 class="font-header text-2xl">4.</h2>
+          <p class="font-paragraf mb-4">Kom ned i butikken og hent din nye plade</p>
+        </div>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="bg-orange py-20" id="webshop-section">
-  <div class="max-w-6xl mx-auto px-6">
+  <section class="bg-orange py-20" id="webshop-section">
+    <div class="max-w-6xl mx-auto px-6">
 
-    <h1 class="text-beige font-display fade-uptext-4xl pb-12">
-      Webshop
-    </h1>
-<h2 class="text-beige font-header text-2xl md:text-2xl lg:text-1xl pb-10 fade-up max-w-2xl">
-Køb igennem webshop       </h2>
-<Heading size="small" variant="secondary" className="mb-8 text-beige">
-Vi har ikke vores egen webshop men sælger plader igennem sitet discogs.dk. 
-Discogs er en af verdens største online markedspladser for vinyl og et værktøj, som mange samlere bruger hver dag. Her kan du finde detaljerede oplysninger om næsten alle musikudgivelser – og du kan også købe vores plader direkte gennem vores Discogs-shop. Platformen bruges af samlere til at finde sjældne presninger, sammenligne priser og sikre, at de får den helt rigtige udgave af en plade. </Heading>
+    <h1 class="text-beige font-display fade-up text-4xl pb-8" id="Købibutikken-section">
+Køb via ekstern webshop        </h1>
 
+      <h2 class="text-beige font-header text-2xl md:text-2xl lg:text-1xl pb-10 fade-up max-w-2xl">
+Køb nogle af vores plader igennem discogs       </h2>
 
-     
-  
-      </div>
-
+      <Heading size="small" variant="secondary" className="mb-8 text-beige">
+        Vi har ikke vores egen webshop men sælger plader igennem sitet discogs.dk.
+        Discogs er en af verdens største online markedspladser for vinyl og et værktøj, som mange samlere bruger hver dag. Her kan du finde detaljerede oplysninger om næsten alle musikudgivelser – og du kan også købe vores plader direkte gennem vores Discogs-shop. Platformen bruges af samlere til at finde sjældne presninger, sammenligne priser og sikre, at de får den helt rigtige udgave af en plade.
+      </Heading>
+<Button 
+  class="hover:scale-[1.03] hover:bg-orange hover:text-beige"
+  variant="secondary"
+  size="medium"
+  href="/byt&salg"
+>
+  Ekstern Webshop
+</Button>
     </div>
-  </div>
-</section>
+  </section>
+
+</MainLayout>
+
 <style>
-	.fade-up {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.fade-up.animate {
-  opacity: 1;
-  animation: fadeInUp 1s;
-}
+  .fade-up {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .fade-up.animate {
+    opacity: 1;
+    animation: fadeInUp 1s;
+  }
+
+  /* ⭐ Illustration kun på denne underside ⭐ */
+  .køb-illustration {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .køb-illustration img {
+    height: 1200px;
+    width: auto;
+    transform: translateY(-120px);
+  }
+
+  /* Skjul på mobil */
+  @media (max-width: 48rem) {
+    .køb-illustration {
+      display: none;
+    }
+  }
 </style>

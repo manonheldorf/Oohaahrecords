@@ -132,8 +132,8 @@ html {
 @media (max-width: 48rem) {
   /* Make the spinning vinyl less huge and less off-canvas on small screens */
   .pladestor {
-    top: 26rem !important;
-    right: -10rem !important;
+    top: -[-36rem]  !important;
+    right: -5rem !important;
     width: 60vw !important;
     max-width: none !important;
   }
