@@ -131,26 +131,26 @@ html {
 /* MOBILE OVERRIDES: these only apply under the md breakpoint so desktop is unchanged */
 @media (max-width: 48rem) {
   /* Make the spinning vinyl less huge and less off-canvas on small screens */
-  .pladestor {
-    top: -[-36rem]  !important;
-    right: -5rem !important;
-    width: 60vw !important;
-    max-width: none !important;
-  }
+.pladestor {
+  top: 30rem;
+  right: -5rem;
+  width: 60vw;
+  max-width: none;
+}
 
   /* Reduce hero vertical spacing on mobile */
   .hero-content {
-    padding-top: 6rem !important;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-top: 6rem ;
+    padding-left: 1rem ;
+    padding-right: 1rem ;
   }
 
   /* Make genre tiles smaller on phones (w-65 / h-65 exist in markup) */
-  .w-65 { width: 30 !important; }
-  .h-65 { height: 30rem !important; }
+  .w-65 { width: 30 ; }
+  .h-65 { height: 30rem ; }
 
   /* Footer logo smaller on mobile */
-  .w-120 { width: 8rem !important; }
+  .w-120 { width: 8rem ; }
 
   /* Ensure overflow in marquee-style sections behaves on small screens */
   .animate-infinite-scroll img { height: auto; max-height: 15.5rem; }
